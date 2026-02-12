@@ -1,0 +1,181 @@
+02.12 6:44 AM
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Queen ❤️</title>
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  font-family: Arial;
+  text-align:center;
+  overflow:hidden;
+  color:white;
+  background: linear-gradient(-45deg,#ff4d6d,#ff9a9e,#ff758c,#ff7eb3);
+  background-size:400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.hidden{display:none;}
+
+h1{
+  margin-top:40px;
+  font-size:28px;
+}
+
+img{
+  width:220px;
+  border-radius:20px;
+  margin-top:20px;
+  box-shadow:0 0 30px white;
+}
+
+button{
+  padding:15px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  margin:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#yes{
+  background:white;
+  color:#ff4d6d;
+}
+
+#yes:hover{
+  transform:scale(1.2);
+}
+
+#no{
+  background:black;
+  color:white;
+  position:absolute;
+}
+
+#final{
+  display:none;
+  font-size:24px;
+  margin-top:30px;
+}
+
+.heart{
+  position:absolute;
+  font-size:20px;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(100vh);}
+  100%{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div id="lock">
+  <h1>Enter Secret Password </h1>
+  <input type="password" id="pass" placeholder="Her Nickname">
+  <br><br>
+  <button onclick="unlock()">Unlock Love ❤️</button>
+</div>
+
+<div id="main" class="hidden">
+  <h1 id="typing"></h1>
+
+  <img src="https://<a href="https://ibb.co/Gv3vzNJ2"><img src="https://i.ibb.co/7JNJsLzW/Snapchat-1196874233.jpg" alt="Snapchat-1196874233" border="0"></a>>
+
+  <p>You are my everything </p>
+
+  <button id="yes" onclick="loveAccepted()">YES </button>
+  <button id="no" onmouseover="moveNo()">NO </button>
+
+  <div id="final">
+    I LOVE YOU FOREVER ❤️ <br>
+    Will You Marry Me? ✨
+  </div>
+</div>
+
+<audio autoplay loop>
+<source src="https://lynkify.in/song/nazm-nazm/ibQbgNyT
+</audio>
+
+<script>
+
+/* PASSWORD */
+function unlock(){
+  var input=document.getElementById("pass").value;
+  if(input.toLowerCase()=="shravyalove"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("main").classList.remove("hidden");
+    typeText();
+  } else {
+    alert("Wrong password baby ");
+  }
+}
+
+/* Typing effect */
+var text="Dear Shravya ❤️";
+var i=0;
+function typeText(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(typeText,100);
+  }
+}
+
+/* Move NO button */
+function moveNo(){
+  var btn=document.getElementById("no");
+  btn.style.top=Math.random()*80+"vh";
+  btn.style.left=Math.random()*80+"vw";
+}
+
+/* YES CLICK */
+function loveAccepted(){
+  document.getElementById("final").style.display="block";
+  fireworks();
+}
+
+/* Floating Hearts */
+setInterval(function(){
+  var heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(3+Math.random()*2)+"s";
+  document.body.appendChild(heart);
+  setTimeout(()=>{heart.remove()},5000);
+},300);
+
+/* Simple Fireworks */
+function fireworks(){
+  for(let i=0;i<30;i++){
+    let spark=document.createElement("div");
+    spark.innerHTML="✨";
+    spark.style.position="absolute";
+    spark.style.left=Math.random()*100+"vw";
+    spark.style.top=Math.random()*100+"vh";
+    spark.style.fontSize="20px";
+    document.body.appendChild(spark);
+    setTimeout(()=>{spark.remove()},2000);
+  }
+}
+
+</script>
+
+</body>
+</html>
+
